@@ -1,0 +1,46 @@
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+
+<view class='page'>
+  <view class="page__bd">
+    <view class="guidetop">
+      <view class='guidelogo'>
+        <image mode='aspectFill' src='../../images/logo.png'></image>
+      </view>
+    </view>
+    <view class='guidebottom'>
+      <view class="weui-flex">
+
+        <view class="weui-flex__item">
+          <view class="placeholder gift_state">
+            <image src='../../images/user-solid.png'></image>
+            <view>选好友</view>
+          </view>
+        </view>
+
+        <view class="weui-flex__item">
+          <view class="placeholder gift_state">
+            <image src='../../images/birthday-cake-solid.png'></image>
+            <view>挑礼物</view>
+          </view>
+        </view>
+
+        
+
+        <view class="weui-flex__item">
+          <view class="placeholder gift_state">
+            <image src='../../images/check-circle-solid.png'></image>
+            <view>送惊喜</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='guidemid'>
+      <!-- <view class='choose_tit'>派刻</view> -->
+      <view class='choose_txt'>只需三步，将惊喜送到Ta的手中</view>
+    </view>
+    <view class='weui-btn-area'>
+      <button class="weui-btn" type="primary" bindtap='tochoose' data-statu="open" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{btnVal}}</button>
+    </view>
+
+  </view>
+</view>

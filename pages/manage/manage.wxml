@@ -1,0 +1,28 @@
+<view class='page'>
+  <view class='page__bd'>
+    <view class="item-wrapper">
+
+      <view class="item-list" wx:for="{{itemData}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+        <view class="item-info" data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="left:{{item.left + 'rpx'}}">
+          <image class="info-img" src="{{item.head_image}}"></image>
+          <view class="info-wrapper">
+            <view class="info-desc">
+              <view class="name">{{item.name}}</view>
+              <view class="time">{{item.time}}</view>
+            </view>
+            <view class="info-content">{{item.info}}</view>
+          </view>
+        </view>
+        <view class="item-oper">
+          <view class="oper-delete" bindtap="yidong" data-id="{{item.id}}">移动 </view>
+          <view class="oper-delete" bindtap="itemDelete" data-nick_name='{{item.nick_name}}' data-id="{{item.id}}">删除 </view>
+        </view>
+      </view>
+
+      <view class='infomessage' wx:if='{{info}}'>阿哦！没有更多了~</view>
+    </view>
+
+   
+
+  </view>
+</view>

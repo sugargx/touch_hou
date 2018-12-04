@@ -1,0 +1,10 @@
+<view class='page'>
+  <video src='{{video}}' show-fullscreen-btn="false" autoplay='true' style='height:{{windowHeight}}px'></video>
+  <view class='page__bd'>
+
+
+    <view class='weui-btn-area'>
+      <button class="weui-btn" type="primary" bindtap='toIndex'>返回首页</button>
+    </view>
+  </view>
+</view>

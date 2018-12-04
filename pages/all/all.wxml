@@ -1,0 +1,72 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class='picture'>
+            <block wx:for="{{goodslistbynumber}}">
+              <view class="item" data-id="{{item.id}}" bindtap='goTocakeinfo'>
+                <image src="{{item.image}}"></image>
+                <view class='introduce'>
+                  <span class="name">{{item.name}}</span>
+                  <view class='info'>
+                    <span class="price">￥{{item.minprice/100}}</span>
+                    <span> · </span>
+                    <span class="judge">销量{{item.count}}</span>
+                  </view>
+                  <!-- <span class="judge">500人评价</span> -->
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class='infomessage' wx:if='{{num_info}}'>阿哦！没有更多了~</view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='picture'>
+            <block wx:for="{{goodslistbydistance}}">
+              <view class="item" data-id="{{item.id}}" bindtap='goTocakeinfo'>
+                <image src="{{item.image}}"></image>
+                <view class='introduce'>
+                  <span class="name">{{item.name}}</span>
+                  <view class='info'>
+                    <span class="price">￥{{item.minprice/100}}</span>
+                    <span> · </span>
+                    <span class="judge">{{item.distance}}km</span>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class='infomessage' wx:if='{{distance_info}}'>阿哦！没有更多了~</view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class='picture'>
+            <block wx:for="{{goodslistbyprice}}">
+              <view class="item" data-id="{{item.id}}" bindtap='goTocakeinfo'>
+                <image src="{{item.image}}"></image>
+                <view class='introduce'>
+                  <span class="name">{{item.name}}</span>
+                  <view class='info'>
+                    <span class="price">￥{{item.minprice/100}}</span>
+                  </view>
+                  <!-- <span class="judge">500人评价</span> -->
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class='infomessage' wx:if='{{price_info}}'>阿哦！没有更多了~</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

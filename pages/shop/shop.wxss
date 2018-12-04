@@ -1,0 +1,125 @@
+.weui-search-bar {
+  width:570rpx;
+  float:right;
+  background-color:#fff; 
+  padding-left: 2rpx;
+  border: 0;
+}
+.address{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+ 
+}
+.address image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.address span{
+  padding-left: 7rpx;
+  font-size: 35rpx;
+}
+.nav{
+  height: 170rpx;
+}
+/*幻灯片高度  */
+swiper {
+  height: 400rpx!important;
+}
+swiper-item image {
+  width: 100%; 
+  height: 100%;
+  /*宽度占全屏为750rpx */
+}
+/*图标  */
+.icon {
+  background-color: white;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.icon view {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.icon view span {
+  font-size: 35rpx;
+  display:block;
+  margin-top: -10rpx;
+}
+.icon image {
+  margin-top: 20rpx;
+  width: 60%;
+}
+
+/*分类推荐——口味  */
+.type{
+  margin-top: 20rpx;
+}
+.type .title{
+  text-align: center;
+  font-size: 50rpx;
+}
+.type .info{
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+}
+.type .picture{
+  margin-top: 10rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.type .picture image{
+  /* width: 200rpx; */
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid #ccc;
+}
+
+/*人气推荐  */
+.popular{
+  margin-top: 20rpx;
+}
+.popular .title{
+  text-align: center;
+  font-size: 50rpx;
+}
+.popular .info{
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+}
+.popular .picture{
+  margin-top: 10rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.popular .picture image{
+  /* width: 200rpx; */
+  width: 90%;
+  height: 200rpx;
+  border: 1px solid #ccc;
+}
+.popular .introduce span{
+  display: block;
+  line-height: 40rpx;
+}
+.popular .introduce .price{
+  color: red;
+}
+.popular .introduce .judge{
+  color: #777;
+  font-size: 35rpx;
+}
+
+/*查看全部蛋糕  */
+.all{
+  display: block;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  font-size: 50rpx;
+}

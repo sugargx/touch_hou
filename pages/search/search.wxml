@@ -1,0 +1,47 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入关键词" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-search-bar__cancel-btn" bindtap="returnTo">取消</view>
+        </view>
+    </view>
+
+    <view class='part'>
+      <view class='name'>蛋糕</view>
+      <view class='type'>
+        <span class="item_most">味多美</span>
+        <span class="item">黑天鹅</span>
+        <span class="item_most">21 cake</span>
+        <span class="item">好利来</span>
+        <span class="item">MCAKE</span>
+        <span class="item_most">冰淇淋蛋糕</span>
+      </view>
+    </view>
+
+    <view class='part'>
+      <view class='name'>鲜花</view>
+      <view class='type'>
+        <span class="item_most">永生花</span>
+        <span class="item">红玫瑰</span>
+        <span class="item_most">包月鲜花</span>
+        <span class="item">向日葵</span>
+      </view>
+    </view>
+
+    <view class='part_history'>
+      <view class='name'>搜索历史</view>
+      <view class='type_history'>
+        <span class="item">哈哈哈</span>
+        <span class="item">好利来</span>
+        <span class="item">MCAKE</span>
+      </view>
+    </view>
+</view>

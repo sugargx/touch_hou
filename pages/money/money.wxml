@@ -1,0 +1,43 @@
+<view class='container page'>
+  <view class="page__hd">
+    <view class="page__title">余额积分</view>
+  </view>
+  <view class="page__bd">
+    <!-- <view class="weui-form-preview money">
+
+      <view class="weui-form-preview__bd container">
+        <text style='font-size:30rpx; line-height:35rpx; padding-top:50rpx;'>可用余额\n</text>
+        <text style='font-size:60rpx; padding-bottom:80rpx;'>¥0.00</text>
+
+      </view>
+      <view class="weui-form-preview__ft">
+        <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">
+          <view style='white-space:pre-line;font-size:45rpx; line-height:30rpx; padding-top:25rpx;'>
+            <text>¥0.00</text>
+          </view>
+          <view style='white-space:pre-line;font-size:25rpx; line-height:30rpx; padding-top:10rpx;padding-bottom:15rpx;'>
+            <text>充值</text>
+          </view>
+
+        </navigator>
+        <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+          <view style='white-space:pre-line;font-size:45rpx; line-height:30rpx; padding-top:25rpx;'>
+            <text>¥0.00</text>
+          </view>
+          <view style='white-space:pre-line;font-size:25rpx; line-height:30rpx; padding-top:10rpx;padding-bottom:15rpx;'>
+            <text>提示</text>
+          </view>
+        </navigator>
+      </view>
+    </view> -->
+    <view class="weui-form-preview money">
+
+      <view class="weui-form-preview__bd container">
+        <text style='font-size:30rpx; line-height:35rpx; padding-top:50rpx;'>您的可用积分\n</text>
+        <text style='font-size:60rpx; padding-bottom:30rpx;'>{{userInfo.integral}}\n</text>
+        <text style='font-size:25rpx;'>普通用户</text>
+
+      </view>
+    </view>
+  </view>
+</view>

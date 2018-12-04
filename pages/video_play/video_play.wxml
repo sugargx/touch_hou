@@ -1,0 +1,32 @@
+<view class='page'>
+
+  <view class='page__hd'>
+    <view class='page__title'>致{{receiver_name}}：</view>
+    <view class='page__desc'>{{app.globalData.appInfo.lookVideo_remind}}</view>
+  </view>
+
+  <view class='page__bd'>
+    <!-- <video src='{{finishVideo[0].video}}'></video> -->
+    <view class='button-sp-area'>
+      <button class='bfBtn weui-btn' type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">一探究竟</button>
+    </view>
+
+    <!-- 展示哪些好友录制了视频 -->
+
+    <view class='touxiangRow'>
+      <block wx:for="{{videos}}">
+        <view class='imageView'>
+          <image src='{{item.head_image}}'></image>
+        </view>
+      </block>
+    </view>
+
+    <view class='num'>
+      <text class='red'>{{videos.length}}</text>人录制了视频
+    </view>
+
+  </view>
+  <modal id="modal" hidden="{{hiddenmodalput}}" title="{{title}}" cancel-text="{{cancel_text}}" confirm-text="确定" bindconfirm="confirmModel" bindcancel = "cancelModel">
+    <input type='text' name="code" bindinput='codeChange' placeholder="请输入验证码：" />
+  </modal>
+</view>

@@ -1,0 +1,20 @@
+/* button{
+  background-color: #65c4c8!important;
+  color: white!important;
+} */
+.page .page_hd{
+  text-align: center;
+}
+page{
+  width: 100%;
+}
+.page .page_hd .title{
+  font-size: 40rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  width: 90%;
+  margin: 20rpx auto;
+  box-shadow:2px 2px 5px #65c4c8, 2px 2px 5px #65c4c8;
+}

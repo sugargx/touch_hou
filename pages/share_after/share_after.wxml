@@ -1,0 +1,35 @@
+<view class='page'>
+  <view class='page__hd'>
+    <view class='page__title'>
+       小派提醒：
+    </view>
+    <view class='page__desc'>
+       {{app.globalData.appInfo.share_remind}}
+    </view>
+  </view>
+  <view class='page__bd'>
+    <view class='people'>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <image src="{{purchaser.head_image}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">{{purchaser.nick_name}}</view>
+          <view class="weui-cell__ft">发起人</view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">{{bless.receiver_name}}</view>
+          <view class="weui-cell__ft">接收者</view>
+        </view>
+      </view>
+    </view>
+    <!-- 考虑是否加此链接中已经上传视频的人了 -->
+    <view class='weui-btn-area'>
+      <button open-type="getUserInfo" class="weui-btn" type="primary" bindgetuserinfo="bindGetUserInfo">查看祝福</button>
+      <button class="weui-btn" type="primary" open-type="share">分享链接</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/guide/guide",
+    "pages/shop/shop",
+    "pages/all/all",
+    "pages/cakeinfo/cakeinfo",
+    "pages/social/social",
+    "pages/buy_after/buy_after",
+    "pages/my/my",
+    "pages/myorder/myorder",
+    "pages/myinformation/myinformation",
+    "pages/switchcity/switchcity",
+    "pages/search/search",
+    "pages/buy_now/buy_now",
+    "pages/camera/camera",
+    "pages/feedback/feedback",
+    "pages/money/money",
+    "pages/raise_money/raise_money",
+    "pages/talk/talk",
+    "pages/manage/manage",
+    "pages/addfriends/addfriends",
+    "pages/message/message",
+    "pages/business_info/business_info",
+    "pages/video_list/video_list",
+    "pages/selectfirend/selectfirend",
+    "pages/friendmap/friendmap",
+    "pages/getinfo/getinfo",
+    "pages/msg_success/msg_success",
+    "pages/tocamera/tocamera",
+    "pages/share_after/share_after",
+    "pages/pullvideo/pullvideo",
+    "pages/scanning/scanning",
+    "pages/select_relationship/select_relationship",
+    "pages/friend_type/friend_type",
+    "pages/festival_article/festival_article",
+    "pages/addOrderInfo/addOrderInfo",
+    "pages/video_play/video_play",
+    "pages/my/mybless/mybless",
+    "pages/share_addfriend/share_addfriend",
+    "pages/addfriend_success/addfriend_success",
+    "pages/pay_success/pay_success",
+    "pages/cart/cart",
+    "pages/my/bless_info/bless_info",
+    "pages/cart_pay_success/cart_pay_success",
+    "pages/cf/addOrderInfo/addOrderInfo",
+    "pages/cf/cf_share/cf_share",
+    "pages/cf/buy_now/buy_now"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff8800",
+    "navigationBarTitleText": "Touch",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "首页",
+        "iconPath": "images/home2.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/social/social",
+        "text": "此刻",
+        "iconPath": "images/social.png",
+        "selectedIconPath": "images/social_selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart_selected.png"
+      },
+      
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_selected.png"
+      }
+    ]
+  }
+}

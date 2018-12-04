@@ -1,0 +1,7 @@
+page{
+    background-color: #FFFFFF;
+}
+image{
+  width: 100%;
+    margin: 4px 0;
+}

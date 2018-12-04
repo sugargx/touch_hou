@@ -1,0 +1,192 @@
+.page {
+}
+
+.weui-tab__content {
+  /* background-color: #eee !important; */
+}
+
+/*3  */
+
+.tip {
+  height: 460rpx;
+  background-color: white;
+  margin-bottom:20rpx;
+}
+
+.tip .title {
+  /* margin-top: 10rpx; */
+  display: flex;
+  flex-direction: row;
+}
+
+.tip .title image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 50rpx;
+  margin-right: 10rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.tip .title .point {
+  float: right;
+  margin-right: 50rpx;
+}
+
+.content {
+  /* height: 200rpx; */
+}
+
+.content .picture .festival_img{
+  /* width: 750rpx; */
+  height: 325rpx !important;
+  width: 100%;
+}
+
+.content .word {
+  display: inline-block;
+  margin-left: 50rpx;
+  padding-top:13rpx;
+}
+
+.content .day {
+  display: inline-block;
+  float: right;
+  margin-right: 50rpx;
+  color: red;
+  padding-top:13rpx;
+}
+
+.title .festival_name {
+  padding-top: 14rpx;
+}
+
+/*2  */
+
+.item {
+  height: auto;
+  background-color: white;
+  margin-bottom:20rpx;
+}
+
+.item .header {
+  /* margin-top: 10rpx; */
+}
+
+.item .header image {
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.item .header .name {
+  padding-top: 20rpx;
+}
+
+.item .header .word {
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.item .content .title {
+  margin-top: 10rpx;
+  margin-left: 150rpx;
+  margin-right: 10rpx;
+  font-size: 14px;
+}
+
+.item .content .picture {
+  margin-left: 150rpx;
+  padding-bottom: 20rpx;
+  padding-top: 10rpx;
+}
+
+.item .content .picture image {
+  /* width: 550rpx; */
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+
+.other {
+  margin-top: 40rpx;
+}
+
+.other .view {
+  margin-left: 150rpx;
+  color: #ccc;
+  font-size: 35rpx;
+}
+
+.other .count {
+  color: #ccc;
+  margin-left: 100rpx;
+}
+
+.other image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/*1  */
+
+.birthday {
+  height: 150rpx;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.birthday image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  /* display: left; */
+  margin-right: 20rpx;
+}
+
+.birthday .first {
+  margin-top: 30rpx;
+  width: 410rpx;
+}
+
+.birthday .word {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+.birthday .second {
+  margin-top: 30rpx;
+  /* margin-left: 250rpx; */
+}
+
+.birthday .count {
+  color: red;
+  margin-left: 60rpx;
+}
+
+.birthday .info {
+  font-size: 30rpx;
+  color: #aaa;
+}
+
+/* 发布动态 */
+
+.addEssay image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.addEssay {
+  position: fixed;
+  bottom: 50rpx;
+  right: 20rpx;
+}

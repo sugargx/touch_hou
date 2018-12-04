@@ -1,0 +1,44 @@
+<view class='page'>
+  <view class='page-bd'>
+    <view class='header'>
+      <view class='image'>
+        <image src='../../images/touxiang2.png'></image>
+      </view>
+      <view class='font_left'>发起者</view>
+      <view class='font_right'>小红</view>
+    </view>
+    <view class='info'>
+      <view class='first'>
+        <view class='title'>
+          <span class="name">轻乳酪蛋糕</span>
+          <span class="price">¥198</span>
+        </view>
+        <view class='introduce'>
+          <view>蛋糕尺寸 20*20cm</view>
+          <view>收获地址 山东省淄博市张店区山东理工大学西校区</view>
+        </view>
+      </view>
+      <image src='../../images/cake2.png'></image>
+      <view class='second'>
+        <view class='title'>
+          具体时间
+        </view>
+        <view class='introduce'>
+          众筹时间 2018.1.1
+        </view>
+      </view>
+      <view class='third'>
+        <view class='title'>
+          蛋糕配方
+        </view>
+        <view class='introduce'>
+          鸡蛋...
+        </view>
+      </view>
+    </view>
+    <view class='bottom'>
+      <button class='pur_first' bindtap='zhufuTo'>添加祝福</button>
+      <button class='pur_second' bindtap='shareTo'>立即分享</button>
+    </view>
+  </view>
+</view>

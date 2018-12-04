@@ -1,0 +1,20 @@
+{
+   "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/social/social",
+        "text": "添加祝福",
+        "iconPath": "images/icon-person.png",
+        "selectedIconPath": "images/icon-person-d.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "立即分享",
+        "iconPath": "images/icon-person.png",
+        "selectedIconPath": "images/icon-person-d.png"
+      }
+    ]
+  }
+
+
+}

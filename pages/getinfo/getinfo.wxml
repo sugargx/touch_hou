@@ -1,0 +1,45 @@
+<view class='page'>
+
+  <view class='page__hd'>
+    <view class='page__title'>小派提醒：</view>
+    <view class='page__desc'>{{app.globalData.appInfo.receiver_info_remind}}</view>
+  </view>
+
+  <view class='page__bd'>
+    <view class="weui-cells weui-cells_after-title">
+      <!-- 好友姓名 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">好友姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" bindinput='friend_nick_name_change' value='{{friend_nick_name}}' placeholder="请完善好友姓名" />
+        </view>
+      </view>
+      <!-- 手机联系方式 -->
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号" bindinput="friend_phone_input" value="{{friend_phone}}" type='number' />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">
+          <view class="weui-label">配送地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <textarea style='height:110rpx;width:510rpx' value='{{friend_address}}' placeholder='市县小区楼号单元房间号' bindinput='friend_address_input'></textarea>
+        </view>
+      </view>
+
+
+    </view>
+
+    <view class='weui-btn-area'>
+      <button class="weui-btn" type="primary" bindtap='toGoods'>确定</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class='page'>
+  <view class='page__bd'>
+
+    <view class="item-wrapper">
+      <view class="item-list" wx:for="{{itemData}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+        <view class="item-info" data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="left:{{item.left + 'rpx'}}">
+          <!-- 头像 -->
+          <image class="info-img" src="{{item.headappear}}"></image>
+          <view class="info-wrapper">
+            <view class="info-desc">
+              <view class="name">{{item.name}}</view>
+            </view>
+            <view class="info-content">{{item.info}}</view>
+          </view>
+          <!-- 录制视频图片 -->
+          <image src='{{item.videoimg}}' class='video-img'></image>
+        </view>
+        <view class="item-oper">
+          <view class="oper-delete" bindtap="itemDelete" data-index="{{index}}">删除</view>
+        </view>
+      </view>
+
+      <view class='weui-btn-area'>
+        <button class='weui-btn' type='primary'>确认合成</button>
+      </view>
+
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page">
+  <!-- <view class='page__bd'> 
+    <image src='{{festival.image}}'></image>
+  </view> -->
+  <view class="page__hd">
+    <view class="page__title">{{festival.name}}</view>
+    <view class="page__desc">{{festival.word}}</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">{{festival.title}}</view>
+      <view class="weui-article__section">
+        <!-- <view class="weui-article__title">章标题</view> -->
+        <view class="weui-article__section">
+          <!-- <view class="weui-article__h3">1.1 节标题</view> -->
+          <view class="weui-article__p">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+          </view>
+          <!-- <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../images/guide1.png" mode="widthFix" style="height: 180px" />
+                        <image class="weui-article__img" src="../../images/guide2.png" mode="widthFix" style="height: 180px" />
+                    </view> -->
+        </view>
+      </view>
+    </view>
+    <view class='weui-btn-area'>
+      <button class='weui-btn' type="primary" bindtap='toIndex'>挑礼物</button>
+    </view>
+  </view>
+
+</view>

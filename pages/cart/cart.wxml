@@ -1,0 +1,55 @@
+<!--pages/cart/cart.wxml-->
+<block wx:if="{{hasList}}">
+  <view class="cart-box">
+    <!-- wx:for 渲染购物车列表 -->
+    <view wx:for="{{carts}}" wx:key="key" class="cart_container">
+      <!-- wx:if 是否选择显示不同图标 -->
+      <view class="item-select">
+        <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+      </view>
+      <!-- 点击商品图片可跳转到商品详情 -->
+      <navigator url="../post/post?id={{item.id}}">
+        <image class="item-image" src="{{item.goods_image}}"></image>
+      </navigator>
+      <view class="column">
+        <text class="title">{{item.goods_name}}</text>
+        <view class="row">
+          <text class="sku-price">￥{{item.goods_price}}</text>
+          <!-- 增加减少数量按钮 -->
+          <view class="sku">
+            <text bindtap="minusCount" data-index="{{index}}">-</text>
+            <text>{{item.num}}</text>
+            <text bindtap="addCount" data-index="{{index}}">+</text>
+          </view>
+        </view>
+      </view>
+      <!-- 删除按钮 -->
+      <text bindtap="deleteList" data-index="{{index}}" class='del' data-delId="{{item.goods_id}}"> × </text>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom_total">
+    <view class="bottom_line"></view>
+    <view class="row">
+      <!-- wx:if 是否全选显示不同图标 -->
+      <view class="item-allselect">
+        <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" bindtap="selectAll" />
+        <icon wx:else type="circle" bindtap="selectAll" />
+      </view>
+      <text class="small_text">全选</text>
+      <!-- 总价 -->
+      <text>￥{{totalPrice}}</text>
+      <!-- <button wx:if="{{carts[index]['selected']}}"class="button-red" bindtap="toBuy" formType="submit" data-cartid="{{carts[index]}}" >去结算</button> -->
+      <button class="button-yellow" bindtap="toZc">众筹</button>
+      <button class="button-red" bindtap="toBuy">去结算</button>
+    </view>
+  </view>
+</block>
+
+<block wx:else>
+  <view class='noCart' bindtap='toHome'>
+    <view style='color:#999'>购物车为空，快去添加商品吧！</view>
+  </view>
+</block>

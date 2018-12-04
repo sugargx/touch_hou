@@ -1,0 +1,16 @@
+/* pages/select_relationship/select_relationship.wxss */.radio-group {
+    border-bottom: 1px solid #ddd;
+}
+.radio {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+}
+.info{
+  height: 80rpx;
+  font-size: 40rpx;
+  margin-top: 40rpx;
+}
+.page__hd{
+  text-align: center
+}

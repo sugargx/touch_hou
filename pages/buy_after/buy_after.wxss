@@ -1,0 +1,73 @@
+.header{
+  border-top: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+  /* height: 100rpx; */
+  /* text-align: center; */
+}
+.header .image{
+  display: inline-block;
+}
+.header image{
+  border-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+.header .font_left{
+  color: #ccc;
+  font-size: 35rpx;
+  display: inline-block;
+}
+.header .font_right{
+  margin-left: 400rpx;
+  display: inline-block;
+  margin-top: 40rpx;
+}
+
+.info{
+  margin-top: 40rpx;
+}
+.info .first{
+  margin-left: 30rpx;
+}
+.info .first .title{
+  margin-bottom: 20rpx;
+}
+.info .first .title .price{
+  padding-left: 20rpx;
+  color: red;
+}
+.info .introduce{
+  color: #888;
+  font-size: 35rpx;
+}
+.info .second{
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.info .third{
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.bottom{
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  /* background-color: #fff; */
+  z-index: 999;
+}
+.bottom button{
+  display: inline-block;
+}
+.bottom .pur_first{
+  width: 50%;
+}
+.bottom .pur_second{
+  width: 50%;
+  background-color: #40E0D0;
+}

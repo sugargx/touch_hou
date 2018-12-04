@@ -1,0 +1,43 @@
+<view class='page'>
+  <view class='page__bd'>
+    <view class='container'>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">派送时间</view>
+          <view class="weui-cell__ft ">
+            <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+              <view class="tui-picker-detail" style='width:500rpx;height:70rpx'>
+                <block wx:if="{{selectFlag}}">
+                  {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+                </block>
+                <block wx:else>
+                  请选择派送时间
+                </block>
+              </view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">惊喜模式</view>
+            <view class="weui-cell__ft">
+              <switch bindchange='noticeChange' checked='{{notice}}'/>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">买家留言</view>
+          <view class="weui-cell__ft">
+            <textarea bindinput='leaveMessageChange' style='height:110rpx;width:400rpx;' wx:if="{{!showModal}}"></textarea>
+          </view>
+        </view>
+
+      </view>
+      <view class='weui-btn-area'>
+        <button class='weui-btn' type="primary" bindtap='boyNow'>下一步</button>
+      </view>
+    </view>
+  </view>
+</view>

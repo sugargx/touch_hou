@@ -1,0 +1,24 @@
+/* pages/myinformation/myinformation.wxss */
+page{
+  background-color: white;
+}
+/* button{
+  background-color: #65c4c8!important;
+  color: white!important;
+} */
+
+.user {
+  /* height: 166rpx; *//* border-bottom: 3rpx solid #aaa; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  width: 93px;
+  height: 93px;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+  margin-top: 36px;
+  margin-bottom: 30px;
+}

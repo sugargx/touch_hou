@@ -1,0 +1,25 @@
+<view class='page'>
+  <view class='page__hd'>
+     <view class='page__title'>小派提醒</view>
+     <view class='page__desc'>{{app.globalData.appInfo.video_remind}}</view>
+  </view>
+  <view class='page__bd'>
+    <view class='container'>
+      <view class="video" style="display: flex;flex-direction: column;">
+        <video style="width: auto;height=400px;object-fit: fill;" src="{{src}}"></video>
+        <!-- <view class="weui-progress">
+          <view class="weui-progress__bar">
+            <progress percent="{{progress}}" stroke-width="3" />
+          </view>
+        </view> -->
+        <view class="button-sp-area">
+          <button type="primary" bindtap='chooseVideo' class='weui-btn'>{{firstBtn}}</button>
+          <block wx:if="{{src != ''}}">
+            <button type="primary" bindtap='bindUpLoad' class='weui-btn'>上传视频</button>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

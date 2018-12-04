@@ -1,0 +1,144 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='page'>
+  <view class='page__bd'>
+    <view class='nav'>
+      <!--幻灯片  -->
+      <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" bindtap="previewImage" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='introduce'>
+      <span class="name">{{page.name}}</span>
+      <span class="price">{{page.discount}}</span>
+    </view>
+
+    <!-- <view class='sure'>
+      <span>·积分抵现 ·品质保障 ·待定内容</span>
+    </view> -->
+
+    <view class='size'>
+      <span>规格： {{nowspecifiction.name}}</span>
+      <image src="../../images/select_size.png" bindtap='showModal_alone'></image>
+    </view>
+
+    <view class='tobusiness' bindtap="toShop" data-seller_id='{{seller.id}}'>
+      <view class='businessImage'>
+        <image src='{{seller.logo}}'></image>
+      </view>
+      <view class='info'>
+          <view class='name'>店铺：{{seller.store_name}}
+            <view class='address'>地址：{{seller.store_address}}</view>
+          </view>
+        <!-- <button class="weui-btn mini-btn button" type="primary" size="mini" data-seller_id='{{seller.id}}' bindtap='toShop'>进店</button> -->
+      </view>
+
+    </view>
+
+    <view class="page change">
+      <view class="page__bd">
+        <view class="weui-tab">
+          <view class="weui-navbar">
+            <block wx:for="{{tabs}}" wx:key="*this">
+              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <view class="weui-navbar__title">{{item}}</view>
+              </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+          </view>
+          <view class="weui-tab__panel" style='padding-left:30rpx;padding-right:30rpx'>
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+              <view class='container'>
+                <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+              </view>
+
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+              <view class='container'>
+                <template is="wxParse" data="{{wxParseData:article1.nodes}}" />
+              </view>
+
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='bottom'>
+      <!-- <button class='pur_first weui-btn' bindtap='showModal_alone' wx:if="{{!showModalStatus_alone}}" type='primary'>开始下单</button> -->
+      <view id='gwc' class='addToCart' bindtap='showModal_alone'>加入购物车</view>
+      <view id='zc' class='zhongchou' bindtap='showModal_alone'>众筹</view>
+      <view id='ljxd' bindtap='showModal_alone' class="createOrder" >立即下单</view>
+    </view>
+
+    <!-- 众筹付款 -->
+    <!--屏幕背景变暗的背景  -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+      <view class='price'>
+        <span>实付价格：</span>
+        ¥{{payprice}}
+      </view>
+      <view class='size'>
+        <view class="name">规格:</view>
+        <block wx:for="{{specifiction}}">
+          <view data-num='{{index}}' class="{{_num==index?'button_select':'button'}}" bindtap='selectsize'>{{item.name}}</view>
+        </block>
+      </view>
+      <view class='num'>
+        <view class="name">数量:</view>
+        <!-- 主容器 -->
+        <view class="stepper">
+          <!-- 减号 -->
+          <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+          <!-- 数值 -->
+          <input type="number" disabled='true' bindchange="bindManual" value="{{num}} " />
+          <!-- 加号 -->
+          <text class="normal" bindtap="bindPlus">+</text>
+        </view>
+      </view>
+
+      <!-- <button bindtap='pur_firstTo'>立即购买</button> -->
+      <!-- <button bindtap='pur_secondTo'>发起众筹</button> -->
+    </view>
+
+    <!-- 单独付款 -->
+    <!--屏幕背景变暗的背景  -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus_alone}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus_alone}}">
+      <view class='price'>
+        <span>实付价格：</span>
+        ¥{{payprice}}
+      </view>
+      <view class='size'>
+        <view class="name">规格:</view>
+        <block wx:for="{{specifiction}}">
+          <view data-num='{{index}}' class="{{_num==index?'button_select':'button'}}" bindtap='selectsize'>{{item.name}}</view>
+        </block>
+      </view>
+      <view class='num'>
+        <view class="name">数量:</view>
+        <!-- 主容器 -->
+        <view class="stepper">
+          <!-- 减号 -->
+          <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+          <!-- 数值 -->
+          <input type="number" disabled='true' bindchange="bindManual" value="{{num}} " />
+          <!-- 加号 -->
+          <text class="normal" bindtap="bindPlus">+</text>
+        </view>
+      </view>
+      <button wx:if="{{Model=='ljxd'}}" bindtap='pur_firstTo' class='weui-btn' type="primary" plain="true">下一步</button>
+      <button wx:if="{{Model=='gwc'}}" bindtap='addToCart' class='weui-btn' type="primary" plain="true">确定</button>
+      <button wx:if="{{Model=='zc'}}" bindtap='zhongchou' class='weui-btn' type="primary" plain="true">下一步</button>
+      <!-- <button bindtap='pur_secondTo'>发起众筹</button> -->
+    </view>
+
+  </view>
+
+</view>

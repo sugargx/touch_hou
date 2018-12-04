@@ -1,0 +1,130 @@
+/**index.wxss**/
+Page{
+    background-color: #F0F0F0;
+    padding-top: 30rpx;
+     font-family: "微软雅黑"； 
+}
+.container{
+  padding: 0px;
+}
+/* .container navigator{
+  height: 44px;
+  width: 650rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 560;
+} */
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.mini-btn{
+    margin-right: 5px;
+}
+/* .weui-btn{
+  width: 400rpx;
+  font-size: 40rpx;
+  font-weight: 560;
+  margin-top: 60rpx;
+} */
+input{
+  white-space:pre-wrap!important;
+  max-width: 700rpx!important;
+}
+
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #888;
+    z-index: 10000;
+    opacity: 0.8;
+}
+.modalDlg{
+    width: 580rpx;
+    height: 420rpx;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 10000;
+    margin: -370rpx 85rpx;
+    background-color: #fff;
+    border-radius: 36rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalDlg text{
+  padding: 40rpx;
+  height: 200rpx;
+  font-size:36rpx;
+}
+.modalDlg .button{
+  /* display: inline-flex; */
+  /* justify-content: space-between; */
+  align-items: center;
+  display: flex; 
+  justify-content: space-around; 
+}
+.modalDlg .button button{
+  margin-left:20rpx;
+  margin-right: 20rpx; 
+}
+
+page{
+  background: #f3f7f7;
+}
+.select_box{
+  background: #fff;
+  width: 66%;
+  margin: 30rpx auto;
+  position: relative;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+}
+.select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  z-index:99999;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}

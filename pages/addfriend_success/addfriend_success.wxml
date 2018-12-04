@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area">
+      <icon type="success" size="93"></icon>
+    </view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">添加好友成功</view>
+      <view class="weui-msg__desc">
+      <!-- 快去分享，收集祝福视频吧！ -->
+        <!-- <navigator url="" class="weui-msg__link">文字链接</navigator> -->
+      </view>
+    </view>
+    <view class="weui-msg__opr-area">
+      <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap='toAddInfo'>完善信息</button>
+        <button class="weui-btn" type="default" bindtap='toMy'>个人中心</button>
+      </view>
+    </view>
+  </view>
+</view>

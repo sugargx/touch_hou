@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {},
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "我的信息",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  
+}

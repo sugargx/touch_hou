@@ -1,0 +1,42 @@
+<view class='container'>
+         <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">收货人</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">小猪佩奇的弟弟乔治</view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">联系方式</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">123456789</view>
+            </navigator>
+                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">收获城市</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">地球</view>
+            </navigator>
+                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">具体区域</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">中国</view>
+            </navigator>
+                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">众筹人数</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">10</view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">人均支付</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">10000元</view>
+            </navigator>
+                   <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">众筹时间</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">2020.1.1--2020.12.31</view>
+            </navigator>     <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">派送时间</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">2020.20.20</view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">众筹缘由</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">佩奇过生日</view>
+            </navigator>
+        </view>
+       <button class="weui-btn" type="primary">开始众筹</button>
+ </view>
+
+

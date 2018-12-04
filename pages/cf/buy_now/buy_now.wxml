@@ -1,0 +1,103 @@
+<view class='page'>
+  <view class='page__bd'>
+    <view class='container'>
+      <view class="weui-cells weui-cells_after-title">
+        <!-- <navigator url="" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">收货人</view>
+          <view class="weui-cell__ft ">{{friend_nick_name}}</view>
+        </navigator> -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">收货人</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <input class="weui-input" disabled='disabled' bindinput='friend_nick_name_change' value='{{friend_nick_name}}' placeholder="请完善好友姓名" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">联系方式</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <input class="weui-input" disabled='disabled' bindinput='friend_nick_name_change' value='{{friend_phone}}' placeholder="请完善好友姓名" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">购买物品</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <block wx:if="{{pay_type=='gwc'}}">
+              <block wx:for="{{carts}}">
+                <input class="weui-input" disabled='disabled' placeholder="请输入文本" value='{{item.goods_name}}({{item.goods_name +item.specification_name}}*{{item.num}})' />
+              </block>
+            </block>
+            <input wx:else class="weui-input" disabled='disabled' placeholder="请输入文本" value='{{cakename}}({{nowspecifiction.name}}*{{num}})' />
+          </view>
+        </view>
+        <!-- <navigator url="" class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">共需支付</view>
+          <view class="weui-cell__ft ">{{payprice}}元</view>
+        </navigator> -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">共需支付</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <input class="weui-input" disabled='disabled' placeholder="请输入文本" value='{{payprice}}元' />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">众筹每人</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <input class="weui-input" disabled='disabled' placeholder="请输入文本" value='{{eachMoney}}元' />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">派送时间</view>
+          </view>
+          <view class="weui-cell__bd weui-cell__ft">
+            <input class="weui-input" disabled='disabled' placeholder="请输入文本" value='{{distribution}}' />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">
+            <view class="weui-label">具体地址</view>
+          </view>
+          <view class="weui-cell__ft">
+            <textarea disabled='disabled' style='height:auto;width:400rpx;text-align:left;' wx:if="{{!showModal}}">{{address}}</textarea>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">买家留言</view>
+          <view class="weui-cell__ft">
+            <textarea disabled='disabled' style='height:auto !important;width:400rpx;' wx:if="{{!showModal}}">{{leave_message}}</textarea>
+          </view>
+        </view>
+
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap='buyTo'>发起众筹</button>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="modalDlg" wx:if="{{showModal}}">
+  <text>支付成功！麻溜去给好友送祝福并尽情的分享给你们的共同好友吧！</text>
+  <view class='button'>
+    <button bindtap="gocamera">去祝福</button>
+    <button open-type='share'>去分享</button>
+  </view>
+</view> -->

@@ -1,0 +1,26 @@
+/* pages/camera/camera.wxss */
+/* button{
+  background-color: #65c4c8!important;
+  color: white!important;
+} */
+Page{
+    background-color: #F0F0F0;
+    padding-top: 30rpx;
+     font-family: "微软雅黑"； 
+}
+
+.video{
+ width: 100%;
+}
+video{
+  height: 520rpx!important;
+}
+.weui-progress__bar{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}

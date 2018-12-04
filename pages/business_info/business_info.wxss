@@ -1,0 +1,92 @@
+/* pages/business_info/business_info.wxss */
+
+.introduce span {
+  display: block;
+  line-height: 40rpx;
+}
+
+.introduce .goodsinfo span {
+  display: inline;
+  font-size: 22rpx;
+}
+
+.info {
+  background-color: white;
+  /* width: 400rpx; */
+  position: relative;
+  top: 465rpx;
+  /* border-radius: 40rpx; *//* text-align: center; */
+  margin: auto;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+  border-radius: 28rpx;
+}
+
+info:before {
+  border-top: none !important;
+}
+
+info:after {
+  border-bottom: none !important;
+}
+
+.info .container {
+  padding: 10px 15px;
+}
+
+.page {
+  /* margin-top: 130rpx; */
+  margin-top: 40rpx;
+}
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+/* 商品展示 */
+
+.picture {
+  margin-top: 10rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picture .item {
+  float: left;
+  padding: 0 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.picture image {
+  /* width: 200rpx; */
+  width: 320rpx;
+  height: 320rpx;
+  border: 1px solid #ccc;
+}
+
+.introduce span {
+  display: block;
+  line-height: 40rpx;
+}
+
+.introduce .price {
+  color: red;
+}
+
+.introduce .judge {
+  color: #777;
+  font-size: 30rpx;
+}
+
+.weui-tab__content {
+  padding-top: 20rpx;
+}
+

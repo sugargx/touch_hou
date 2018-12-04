@@ -1,0 +1,12 @@
+.page__hd textarea{
+  font-size: 30rpx;
+  color: #ccc;
+}
+.page button{
+  margin-top: 20rpx;
+}
+
+/* button{
+  background-color: #65c4c8!important;
+  color: white!important;
+} */

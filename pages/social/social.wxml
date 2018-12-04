@@ -1,0 +1,111 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- 动态 -->
+
+        <!-- <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='addEssay' bindtap='addEssay'>
+            <image src='../../images/launch2.png'></image>
+          </view>
+          <block wx:for="{{essays}}">
+            <view class='item'>
+              <view class='header'>
+                <image src='{{item.head_image}}'></image>
+                <view class='name'>{{item.nick_name}}</view>
+                <view class='word'>这是个啥？个性签名？</view>
+              </view>
+              <view class='content'>
+                <view class='title'>{{item.content}}</view>
+                <view class='picture'>
+                  <block wx:for="{{item.images}}" wx:for-item="image">
+                    <image bindtap='previewImage' data-src='{{image.url}}' data-id='{{item.id}}' src='{{image.url}}' mode='aspectFill'></image>
+                  </block>
+                </view>
+              </view>
+              <view class='other'>
+                <span class="view">11100次浏览</span>
+                <span class="count">
+                  <image src='../../images/zan.png'></image>
+                  888
+                  <image src='../../images/talk.png'></image>
+                  888
+                </span>
+              </view>
+            </view>
+          </block>
+          <view class='infomessage' wx:if='{{essay_info}}'>阿哦！没有更多了~</view>
+        </view> -->
+        <!-- 时刻 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{festivals}}">
+            <view class='tip' bindtap='toFestivalContent' id="{{item.id}}">
+              <!-- <view class='title'>
+                <image src='../../images/time1.png'></image> -->
+                <!-- <view class="festival_name">{{item.name}}</view> -->
+                <!-- <span class="point">…</span> -->
+              <!-- </view> -->
+              <view class='content'>
+                <view class='picture'>
+                  <image src='{{item.image}}' mode='aspectFill' class='festival_img'></image>
+                </view>
+                <view class='word'>
+                  {{item.month}}月{{item.day}}日 {{item.word}}
+                </view>
+                <view class='day'>
+                  <text style='color:black;font-size:24rpx;'>还有</text>
+                  <text>{{item.distance}}</text>
+                  <text style='color:black;font-size:24rpx;'>天</text>
+                </view>
+              </view>
+            </view>
+          </block>
+
+          <!-- <view class='tip'>
+            <view class='title'>
+              <image src='../../images/time2.png'></image>
+              <span>节日节气</span>
+              <span class="point">…</span>
+            </view>
+            <view class='content'>
+              <view class='picture'>
+                <image src='../../images/dongtai4.png'></image>
+              </view>
+              <view class='word'>
+                父亲节
+              </view>
+              <view class='day'>
+                9天
+              </view>
+            </view>
+          </view> -->
+        </view>
+        <!-- 好友生日 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{getFriendsBirthday}}">
+            <view class='birthday'>
+              <image src='{{item.head_image}}'></image>
+              <view class='first'>
+                <view class='name'>{{item.nick_name}}</view>
+                <view class='word'>{{item.birthday}}</view>
+              </view>
+              <view class='second'>
+                <view class='info'>距离下个生日</view>
+                <view class='count'>{{item.countdown}}天</view>
+              </view>
+            </view>
+          </block>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

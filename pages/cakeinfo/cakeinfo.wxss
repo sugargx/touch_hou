@@ -1,0 +1,319 @@
+@import "../../wxParse/wxParse.wxss";
+
+/* button{
+  background-color: #65c4c8!important;
+  color: white!important;
+} */
+.page__bd {
+  padding-bottom:70px;
+}
+
+page {
+  /* background-color: #ccc; */
+}
+
+/*幻灯片高度  */
+
+swiper {
+  height: 730rpx !important;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+  /*宽度占全屏为750rpx */
+}
+
+.introduce {
+  /* margin-top: 20rpx; */
+  text-align: center;
+  background-color: #fff;
+}
+
+.introduce .name {
+  font-size: 40rpx !important;
+}
+
+.introduce span {
+  line-height: 60rpx;
+  display: block;
+  padding: 10rpx;
+}
+
+.introduce .price {
+  padding-top: 20rpx;
+  color: red;
+}
+
+.sure {
+  margin-top: 30rpx;
+  background-color: #ccc;
+  height: 110rpx;
+  text-align: center;
+  padding-top: 50rpx;
+}
+
+.size {
+  /* height: 110rpx;  */
+  padding-left: 30rpx;
+  /* padding-top: 20rpx; */
+  padding-bottom: 20rpx;
+}
+
+.size image {
+  float: right;
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 30rpx;
+}
+
+.weui-navbar__slider {
+  width: 7em !important;
+}
+
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  /* max-height: 68px; */
+  position: fixed;
+  /* bottom: -11rpx; */
+  bottom: 0;
+  /* background-color: #fff; */
+  z-index: 9999;
+  
+  /* border: 1px solid red; */
+  display: flex;
+  flex-flow: row;
+}
+.bottom .zhongchou{
+  flex: 1;
+  height: 100%;
+  background-color: green;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.bottom .addToCart{
+  flex: 1;
+  height: 100%;
+  background-color: red;
+  text-align: center;
+  line-height: 100rpx;
+}
+.bottom .createOrder{
+  flex: 1;
+  height: 100%;
+  background-color: yellow;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+/*使屏幕变暗  */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/*对话框 */
+
+.commodity_attr_box {
+  min-height: 550rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 43rpx;
+  padding-bottom: 110rpx;
+}
+
+.price {
+  text-align: center;
+  color: red;
+  padding-left: 20rpx;
+}
+
+.price span {
+  color: black;
+}
+
+.size {
+  /* height: 100rpx; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  /* margin: 20rpx 0; *//* margin-top: 20rpx; */
+  padding-top: 23rpx;
+  margin-top: 20rpx;
+}
+
+.size .button {
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 21rpx;
+  padding: 18rpx 20rpx;
+  margin-right: 30rpx;
+}
+
+.size .button_select {
+  display: inline-block;
+  border: 1px solid red;
+  font-size: 21rpx;
+  padding: 18rpx 20rpx;
+  margin-right: 30rpx;
+  color: red;
+}
+
+.num {
+  /* height: 100rpx; *//* margin-top: 20rpx; */
+}
+
+.num .name {
+  /* display: inline-block; *//* margin-left: 30rpx; *//* margin-bottom: 12rpx; *//* width: 90rpx; */
+  height: 60rpx;
+  /* margin-left: 30rpx; */
+}
+
+/*主容器*/
+
+.stepper {
+  /* width: 80px;
+  height: 26px; */
+  width: 110px;
+  /* height: 40px; *//*给主容器设一个边框*/
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  /* display: inline-block; */
+  margin: 0 auto;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  /* width: 19px;
+  line-height: 26px; */
+  width: 35px;
+  line-height: 37px;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  /* width: 40px;
+  height: 26px; */
+  width: 38px;
+  height: 40px;
+  padding-top: 1.5px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #ccc;
+}
+
+.commodity_attr_box {
+  text-align: center;
+}
+
+.commodity_attr_box button {
+  display: inline-block;
+  /* margin-left: 20rpx; */
+}
+
+.container {
+  /* padding-bottom: 200rpx;
+  margin-bottom: 100rpx; */
+}
+
+/* 跳转到商家 */
+
+.tobusiness {
+  padding-left: 30rpx;
+  /* display: flex; *//* flex-direction: row; */
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  /* height: 220rpx; */
+}
+
+
+
+.tobusiness .name {
+  margin-left: 10rpx;
+}
+
+.tobusiness .button {
+  height: 100rpx;
+  /* width: 150rpx; */
+  font-size: 17px;
+  margin-right: 30rpx;
+  padding-top: 6px;
+}
+
+.tobusiness .info {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 20rpx; *//* margin-left:10rpx; */
+  width: 75%;
+  float: right;
+  margin-right:15px;
+}
+
+.tobusiness image {
+  width: 100%;
+  height: 100%;
+}
+
+.tobusiness .businessImage {
+  width: 20%;
+  height:150rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+
+.info .name .address {
+  color: #aaa;
+}
+
+.change {
+  background-color: #fff;
+}
+
+.navigator-hover {
+  color: #09bb07;
+  background-color: white;
+  opacity: 1;
+}

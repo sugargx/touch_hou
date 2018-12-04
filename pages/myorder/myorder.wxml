@@ -1,0 +1,211 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <!-- 全部订单 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{getAllOrder}}">
+            <view class="orderDetails">
+              <view class="orderListTitle">
+                <view class="userImg">
+                  <image src="{{item.user_head_image}}"></image>
+                </view>
+                <text class="userName">{{item.nick_name}}</text>
+                <text class="notpay" wx:if="{{item.order_status==0}}">待付款</text>
+                <text class="finished" wx:elif="{{item.order_status==1}}">众筹中</text>
+                <text class="finished" wx:elif="{{item.order_status==2}}">待接单</text>
+                <text class="finished" wx:elif="{{item.order_status==3}}">待发货</text>
+                <text class="finished" wx:elif="{{item.order_status==4}}">待收货</text>
+                <text class="finished" wx:elif="{{item.order_status==5}}">已收货</text>
+              </view>
+              <view class="orderListDetails">
+                <block wx:for="{{item.goods}}" wx:for-item="goods">
+                  <view class='eachGoods'>
+                    <view class='image'>
+                      <image src="{{goods.image}}"></image>
+                    </view>
+                    <view class='goodsInfo'>
+                      <view style='color:black'>
+                        {{goods.goods_name}}
+                      </view>
+                      <view>
+                        {{goods.specification_name}}*{{goods.num}}
+                      </view>
+                      <view>
+                        小计￥{{goods.money * goods.num/100}}
+                      </view>
+                    </view>
+                  </view>
+                </block>
+
+                <view class="productInfo">
+                  <view class="time">派送时间：{{item.distribution}}</view>
+                  <view class="time">收货人：{{item.receiver}}</view>
+                  <view class="time">收货人手机：{{item.receiverPhone}}</view>
+                  <view class="order_msg">买家留言：{{item.leave_message?item.leave_message:""}}</view>
+              
+                  <view class="productCount">
+                    合计：￥
+                    <text>{{item.money/100}}</text>
+
+                  </view>
+                </view>
+
+              </view>
+              <view class='aboutorder'>
+                <button class="topay" bindtap='bindBless' data-order_id='{{item.id}}' size='mini' wx:if="{{bindBless}}">绑定</button>
+                <button wx:if="{{item.order_status==0}}" class='topay' data-purchaser_id='{{item.purchaser_id}}' data-order_id='{{item.id}}' bindtap='toPay' size='mini'>付款</button>
+                <button wx:if="{{item.order_status!=0&&item.order_status!=5&&item.order_status!=4&&item.bless_id!=-1}}" class='topay' data-purchaser_id='{{item.purchaser_id}}' data-order_id='{{item.id}}' data-bless_id='{{item.bless_id}}'  bindtap='toBless' size='mini'>看祝福</button>
+                <button wx:if="{{item.order_status!=0&&item.order_status!=5&&item.order_status!=4&&item.cf_id!=-1}}" class='topay' data-purchaser_id='{{item.purchaser_id}}' data-order_id='{{item.id}}' data-cf_id='{{item.cf_id}}'  bindtap='toCf' size='mini'>众筹</button>
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{getOrder_0}}">
+            <view class="orderDetails">
+              <view class="orderListTitle">
+                <view class="userImg">
+                  <image src="{{item.user_head_image}}"></image>
+                </view>
+                <text class="userName">{{item.nick_name}}</text>
+                <text class="notpay">等待付款</text>
+              </view>
+              <view class="orderListDetails">
+                <block wx:for="{{item.goods}}" wx:for-item="goods">
+                  <view class='eachGoods'>
+                    <view class='image'>
+                      <image src="{{goods.image}}"></image>
+                    </view>
+                    <view class='goodsInfo'>
+                      <view style='color:black'>
+                        {{goods.goods_name}}
+                      </view>
+                      <view>
+                        {{goods.specification_name}}*{{goods.num}}
+                      </view>
+                      <view>
+                        小计￥{{goods.money * goods.num/100}}
+                      </view>
+                    </view>
+                  </view>
+                </block>
+
+                <view class="productInfo">
+                  <view class="time">派送时间：{{item.distribution}}</view>
+                  <view class="time">收货人：{{item.receiver}}</view>
+                  <view class="time">收货人手机：{{item.receiverPhone}}</view>
+                  <view class="order_msg">买家留言：{{item.leave_message?item.leave_message:""}}</view>
+              
+                  <view class="productCount">
+                    合计：￥
+                    <text>{{item.money/100}}</text>
+
+                  </view>
+                </view>
+
+              </view>
+              <view class='aboutorder'>
+                <button class='topay' bindtap='toPay' data-purchaser_id='{{item.purchaser_id}}' data-order_id='{{item.id}}' size='mini'>付款</button>
+              </view>
+            </view>
+          </block>
+
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <block wx:for="{{getOrder_4}}">
+            <view class="orderDetails">
+              <view class="orderListTitle">
+                <view class="userImg">
+                  <image src="{{item.user_head_image}}"></image>
+                </view>
+                <text class="userName">{{item.nick_name}}</text>
+                <text class="notcom">待收货</text>
+              </view>
+              <view class="orderListDetails">
+                <block wx:for="{{item.goods}}" wx:for-item="goods">
+                  <view class='eachGoods'>
+                    <view class='image'>
+                      <image src="{{goods.image}}"></image>
+                    </view>
+                    <view class='goodsInfo'>
+                      <view style='color:black'>
+                        {{goods.goods_name}}
+                      </view>
+                      <view>
+                        {{goods.specification_name}}*{{goods.num}}
+                      </view>
+                      <view>
+                        小计￥{{goods.money * goods.num/100}}
+                      </view>
+                    </view>
+                  </view>
+                </block>
+
+                <view class="productInfo">
+                  <view class="time">派送时间：{{item.distribution}}</view>
+                  <view class="time">收货人：{{item.receiver}}</view>
+                  <view class="time">收货人手机：{{item.receiverPhone}}</view>
+                  <view class="order_msg">买家留言：{{item.leave_message?item.leave_message:""}}</view>
+              
+                  <view class="productCount">
+                    合计：￥
+                    <text>{{item.money/100}}</text>
+
+                  </view>
+                </view>
+
+              </view>
+
+              <view class='aboutorder'>
+                <button class='toreceive' size='mini' data-order_id="{{item.id}}" bindtap='confirmReceive'>确认收货</button>
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <block wx:for="{{getOrder_1}}">
+            <view class="orderDetails">
+              <view class="orderListTitle">
+                <view class="userImg">
+                  <image src="../../images/icon.jpg"></image>
+                </view>
+                <text class="userName">用户名</text>
+                <text class="notcom">众筹中</text>
+              </view>
+              <view class="orderListDetails">
+                <view class="productImg">
+                  <image src="../../images/pic.jpg"></image>
+                </view>
+                <view class="productInfo">
+                  <view class="productTitle">这只是一段文字这只是一段文字这只是一段文字这只是一段文字这只是一段文字</view>
+                  <text class="productPrice">￥132.00</text>
+                  <text class="productQuantity">x1</text>
+                  <view class="productCount">
+                    <view>合计：￥
+                      <text>132.00</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='aboutorder'>
+                <button class='tocom' size='mini' bindtap='talkTo'>评价</button>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

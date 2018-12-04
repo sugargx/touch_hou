@@ -1,0 +1,50 @@
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.weui-search-bar{
+  background-color: #fff;
+}
+.searched{
+  display: flex;
+  padding: 15px;
+}
+.userimage{
+  display: block;
+}
+.userimage image{
+  height: 64px;
+  width: 64px;
+}
+.userinfo{
+  margin-left: 15rpx;
+  flex: 1;
+}
+.username{
+  margin-bottom: 30rpx;
+}
+.usernum{
+  color: #aaa;
+  font-size: 30rpx;
+  /* margin-top: 5rpx; */
+}
+.addbtn{
+  margin-top: 15px;
+}
+.mayknowtip{
+  background-color: #eee;
+  font-size: 35rpx;
+  color: #aaa;
+  padding: 3px 0 3px 10px;
+}
+.mayknow{
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}

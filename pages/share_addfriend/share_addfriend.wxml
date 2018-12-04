@@ -1,0 +1,16 @@
+<view class='page'>
+  <view class='page__hd'>
+    <view class='page__title'>
+       小派提醒：
+    </view>
+    <view class='page__desc'>
+       {{friend_name}}请求加您为好友，请您及时处理！
+    </view>
+  </view>
+  <view class='page__bd'>
+    <view class='weui-btn-area'>
+      <button class="weui-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">同意</button>
+      <button class="weui-btn" type="default" bindtap='toIndex'>返回首页</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<view class='page'>
+  <view class="page__hd">
+    <view class="page__title">视频列表</view>
+    <view class="page__desc">{{app.globalData.appInfo.videoList_remind}}</view>
+  </view>
+  <view class='page__bd'>
+    <!-- 合成的视频 -->
+    <block wx:for="{{finishVideo}}">
+      <view wx:if="{{item.video}}" class="weui-cell list most" bindtap='pullvideo' data-video="{{item.video}}" style='padding:0px 0px'>
+        <view class='finishVideo'>
+          <!-- <image class='bofang' src='../../images/bofang.png'></image> -->
+          <image src="{{item.image}}" style='width:100%; border-radius:10rpx;display: block;height:300rpx' mode="aspectFill"></image>
+
+          <view class='content'>{{app.globalData.appInfo.finish_video_message}}</view>
+        </view>
+
+      </view>
+      <view wx:else class="weui-cell list most" bindtap='pullvideo' data-video="{{item.video}}" style='padding:0px 0px'>
+        <view class='finishVideo'>
+          <image src="{{item.image}}" style='width:100%; border-radius:10rpx;display: block;height:300rpx' mode="aspectFill"></image>
+
+          <view class='content'>视频正在玩命合成中！</view>
+        </view>
+
+      </view>
+    </block>
+    <!-- 视频展示 -->
+    <block wx:for="{{videos}}">
+      <view class="weui-cell list" bindtap='pullvideo' data-video="{{item.video}}">
+        <view class="weui-cell__hd" style="position:absolute; top:20rpx;left:30rpx;float:left;">
+          <image src="{{item.head_image}}" style="display:block;float:left; width: 55rpx; height: 55rpx; display: block; border-radius: 100rpx;" />
+          <text style='display:block;float:left; padding-left: 20rpx; font-size:36rpx;'>{{item.nick_name}}</text>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='content_info' wx:if="{{!item.image}}">后台视频处理中！</view>
+          <view class='content_info' wx:else>{{item.name?item.name:item.nick_name}}录制的祝福</view>
+        </view>
+        <image src="{{item.image}}" style='width:170rpx; height:170rpx;float:right;margin-right:30rpx;margin:10rpx 10rpx 10rpx 10rpx;border-radius:10rpx;'></image>
+      </view>
+    </block>
+    <view class='weui-btn-area'>
+      <button wx:if="{{id==purchaser_id&&isConcatVideo}}" class='weui-btn' type="primary" bindtap='concatVideos'>合成视频</button>
+    </view>
+    <view class='weui-btn-area'>
+      <button wx:if="{{isUploadVideo}}" class='weui-btn' type="primary" bindtap='gocamera'>录制祝福</button>
+    </view>
+    <view class='weui-btn-area'>
+      <button class='weui-btn' type="primary" bindtap='gotomy'>个人中心</button>
+    </view>
+  </view>
+</view>

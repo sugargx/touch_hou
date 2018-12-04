@@ -1,0 +1,35 @@
+<view class='page'>
+  <view class='page__bd'>
+    <form bindsubmit='submit'>
+      <view class="weui-cells weui-cells_after-title text-yu ">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" bindinput='contentChange' name="content" placeholder="请输入反馈内容" style="height: 5.3em" />
+            <view class="weui-textarea-counter">{{wordCount}}/200</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title text-kuang">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="phone" placeholder="请输入您的电话号码" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title  text-yu">
+        <view class="weui-cell">
+          <view class="weui-cell__bd" disabled="true">
+            <text style='font-weight:600'>致电客服\n</text>
+            <text style='font-size:30rpx;'>如有商品以及订单问题需要处理\n客服作息时间： 8：00--17：30\n</text>
+            <text style='font-size:30rpx;'>客服电话:{{app.globalData.appInfo.phone}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='weui-btn-area'>
+        <button class="weui-btn" type="primary" form-type='submit'>提交反馈</button>
+      </view>
+    </form>
+  </view>
+</view>

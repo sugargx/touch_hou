@@ -1,0 +1,88 @@
+<!--pages/my/my.wxml-->
+<view class='page'>
+  <view class='page__bd'>
+    <view class="usercontainer">
+      <view class="userinfo">
+        <button class='login' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+        <block wx:else>
+          <image class="userinfo-avatar" src="{{userInfo.head_image}}" mode="cover"></image>
+          <view class="userinfo-account">账号：{{userInfo.account}}</view>
+        </block>
+      </view>
+      <view class='right'>
+        <view class="userinfo-nick_name">{{userInfo.nick_name}}</view>
+        <view class='userinfo-score'>积分：{{userInfo.integral}}</view>
+      </view>
+
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../myinformation/myinformation" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/my_info.png'></image>
+        <view class="weui-cell__bd">我的信息</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        <view></view>
+      </navigator>
+      <navigator url="../myorder/myorder" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/my_list.png'></image>
+        <view class="weui-cell__bd">我的订单</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access more">查看更多</view>
+      </navigator>
+      <view class="navs">
+        <block wx:for-items="{{orderItems}}" wx:key="name">
+          <view class="nav-item" bindtap="toOrder" data-name="{{item.name}}" data-typeid="{{item.typeId}}" hover-class="weui-cell_active">
+            <image src="{{item.imageurl}}" class="nav-image" />
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+      <!-- <view bindtap='scanning' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image class='menu-img' src='../../images/scan.png'></image>
+        <view class="weui-cell__bd">扫一扫</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view> -->
+      <!-- <navigator url="../money/money" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/my_score.png'></image>
+        <view class="weui-cell__bd">余额积分</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator> -->
+
+      <!-- <navigator url="../addfriends/addfriends" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/addfriends.png'></image>
+        <view class="weui-cell__bd">添加好友</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator> -->
+    
+      <!-- <navigator url="/pages/social/social" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/social.png'></image>
+        <view class="weui-cell__bd">此刻</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator> -->
+      <navigator url="../friend_type/friend_type" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/friend_type.png'></image>
+        <view class="weui-cell__bd">我的好友</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+      <navigator url="../my/mybless/mybless" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/bless.png'></image>
+        <view class="weui-cell__bd">我的祝福</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+      <!-- <navigator url="../message/message" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <image src='../../images/my_feedback.png'></image>
+    <view class="weui-cell__bd">消息</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator> -->
+
+      <navigator url="../feedback/feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <image src='../../images/my_feedback.png'></image>
+        <view class="weui-cell__bd">问题反馈</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+
+    </view>
+
+  </view>
+</view>

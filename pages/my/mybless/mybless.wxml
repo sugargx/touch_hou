@@ -1,0 +1,92 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{fbless}}">
+            <view class="orderDetails">
+              <view class="orderListDetails">
+                <view class="productImg" data-bless_id='{{item.bless_id}}' data-purchaser_id='{{item.purchaser_id}}' bindtap='toShare_after'>
+                  <image src="{{item.video_cover}}"></image>
+                </view>
+                <view class="productInfo">
+                  <view class="productTitle">
+                    给{{item.receiver_name}}的视频祝福
+                    <label class="button-management" data-bless_id='{{item.bless_id}}' bindtap='handleEdit' wx:if="{{item.purchaser_id == app.globalData.userInfo.id}}">编辑</label>
+                  </view>
+                  <view class="time" style='color:#999'>时间：{{item.time}}</view>
+                  <view class="time" style='color:#999'>发起人：{{item.purchaser_name}}</view>
+                  <view class="order_msg">参与好友：
+                    <view>
+                      <block wx:for="{{item.users}}" wx:for-item="head_image">
+                        <view class='head_image' wx:if="{{index<5}}">
+                          <image src='{{head_image}}'></image>
+                        </view>
+                      </block>
+                      <view class='head_image' wx:if="{{item.users.length>6}}">
+                        <image src='../../images/shenglue.png' data-order_id='{{item.order_id}}' bindtap='toShare_after'></image>
+                      </view>
+                      <view class='head_image' wx:if="{{item.users.length==6}}">
+                        <image src='{{item.users[5]}}'></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+          <view class='addBless' bindtap='addBless'>
+            <image src='../../../images/launch2.png'></image>
+          </view>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{sbless}}">
+            <view class="orderDetails">
+              <view class="orderListDetails">
+                <view class="productImg" data-bless_id='{{item.bless_id}}' data-purchaser_id='{{item.purchaser_id}}' bindtap='toShare_after'>
+                  <image src="{{item.video_cover}}"></image>
+                </view>
+
+                <view class="productInfo">
+                  <view class="time" style='color:#999'>时间：{{item.time}}</view>
+                  <view class="time" style='color:#999'>发起人：{{item.purchaser_name}}</view>
+                  <view class="order_msg">参与好友：
+                    <view>
+                      <block wx:for="{{item.users}}" wx:for-item="head_image">
+                        <view class='head_image' wx:if="{{index<5}}">
+                          <image src='{{head_image}}'></image>
+                        </view>
+                      </block>
+                      <view class='head_image' wx:if="{{item.users.length>6}}">
+                        <image src='../../images/shenglue.png' data-order_id='{{item.order_id}}' bindtap='toVideoList'></image>
+                      </view>
+                      <view class='head_image' wx:if="{{item.users.length==6}}">
+                        <image src='{{item.users[5]}}'></image>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <!-- <view class='aboutorder'>
+                <button class='topay' data-order_id='{{item.order_id}}' bindtap='toVideoList' size='mini'>查看</button>
+              </view> -->
+            </view>
+          </block>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

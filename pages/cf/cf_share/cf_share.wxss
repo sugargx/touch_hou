@@ -1,0 +1,53 @@
+video {
+  width: 80%;
+  height: 700rpx;
+}
+
+.page__bd {
+  text-align: center;
+}
+.page__desc{
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+
+.num {
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+
+.num .red {
+  color: red;
+}
+.touxiangRow{
+  width: 80%;
+  margin: 100rpx auto;
+  margin-bottom: 0px;
+}
+.imageView {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  border: 1px solid #ccc;
+  margin: 5rpx;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.imageView image {
+  display: inline-block;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  margin:1px auto;
+}
+.bfBtn{
+  letter-spacing: 3rpx;
+}

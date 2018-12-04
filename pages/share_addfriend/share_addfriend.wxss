@@ -1,0 +1,15 @@
+page{
+
+}
+.info{
+  height: 300rpx;
+  background-color: #ccc;
+  /* border: 1px red solid; */
+  margin: 20rpx;
+  border-radius: 20rpx;
+  box-shadow:2px 2px 5px #65c4c8, 2px 2px 5px #65c4c8;
+}
+.people{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
